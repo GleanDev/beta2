@@ -1,0 +1,91 @@
+/* Enter Your Custom CSS Here */
+
+.site-header, .nav-menu-primary .sub-menu{
+    background: #B90504 !important;
+}
+
+
+.home .gjm-map-wrapper{
+	display:none !important;
+}
+
+#search_form{
+    width: 70%;
+    margin: auto;
+}
+
+div.job_listings {
+    text-align: center;
+    position: relative;
+    top: -235px;
+    margin-bottom: -100px;
+}
+
+.home .search_jobs {
+    margin-top: 127px;
+    position: relative;
+    top: 0px;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.search_jobs, .search_resumes {
+    box-shadow: none !important;
+}
+
+.gjm-locator-button-wrapper{
+	display:none !important;
+}
+
+.gjm-orderby-wrapper{
+	position:relative;
+}
+
+.gjm-orderby-wrapper .select {
+    width: 200px !important;
+    position: absolute;
+    right: 120px;
+    top: 97px;
+}
+
+ul.job_listings .job_listing:hover, .job_position_featured, li.type-resume:hover {
+    box-shadow: 5px 0px 0px #333333 inset !important;
+}
+
+.button, .button-secondary:hover, .search_jobs, .search_resumes, .load_more_jobs:hover, .load_more_resumes:hover, .paginate-links .page-numbers:hover, #wp-submit, button.mfp-close, #submitcomment, #searchsubmit, input[type="submit"], .content-grid .featured-image .overlay, .nav-menu-primary .sub-menu, .nav-menu-primary .children, .site-primary-navigation.open, .site-primary-navigation.close, #pmc_mailchimp div input[type="submit"], .mailbag-wrap input[type="submit"], .pricing-table-widget .pricing-table-widget-title, .jobify_widget_price_table_rcp .pricing-table-widget-title, #rcp_registration_form .pricing-table-widget-title, .job-tag, .job-type, .jobify_widget_slider_hero a.button, .mfp-close-btn-in button.mfp-close:hover, .cluster div, .job_listing a.view-video, .resume a.view-video, .job-manager-form.wp-job-manager-bookmarks-form a, .job-manager-pagination a:hover, .job-manager-pagination span:hover {
+    border-color: #B90504 !important;
+}
+
+
+.button, .load_more_jobs, .button-secondary{
+    background: none repeat scroll 0% 0% #B90504 !important;
+  border:white !important;
+  color:white !important;
+}
+
+
+.button:hover, .button-secondary:hover, load_more_jobs:hover{
+	background:white !important;
+    color:#B90504 !important;
+}
+
+.company-slider-item img{
+	height:100px;
+  	width:auto;
+}
+
+.recent-jobs .job_listings{
+    margin-top: 265px !important;
+}
+
+
+#jobify_widget_jobs-1{
+	margin-top:-48px !important;
+}
+
+#jobify_widget_stats-1{
+	margin-top:-65px;
+}
+
+.single-job-spotlight{
+	margin-top:-19px;
+}
