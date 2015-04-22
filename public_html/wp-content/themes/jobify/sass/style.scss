@@ -1,0 +1,663 @@
+/**
+ * Project			:		Scoot
+ * Date				:		09-Apr-2015
+ * Developer		:		Glean Team
+ */
+
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+@import "compass/css3";
+
+/********************
+ * Custom Variables
+ ********************/
+$color-blue: #1d4b71;
+$color-green: #16853d;
+$color-red: #b90504;
+$color-white: #ffffff;
+$color-darkred: #60212d;
+
+/********************
+ * Global Styles
+ ********************/
+.full-width {
+	width: 100%;
+}
+.blue-bg {
+	background-color: $color-blue;
+}
+.red-bg {
+	background-color: $color-red;
+}
+.green-bg {
+	background-color: $color-green;
+}
+
+h1, h2, h3, h4 {
+	font-family: $font-family-sans-serif;
+	padding: 0;
+	margin: 0;
+}
+p, a, table, form, ul, span {
+	font-family: $font-family-serif;
+	font-size: 0.9em;
+	line-height: 1.25em;
+}
+a.cta {
+	border: 2px solid $color-white;
+	color: $color-white;
+	display: inline-block;
+	font-weight: 600;
+	line-height: 1;
+	padding: 10px 30px;
+	@include border-radius( 30px );
+	@include transition( all 0.2s ease-in );
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color-white;
+		color: $color-darkred;
+		text-decoration: none;
+	}
+}
+
+/********************
+ * Navbar
+ ********************/
+.navbar {
+	border:0;
+	margin-bottom: 0;
+	position: fixed;
+	width: 100%;
+}
+.navbar-brand {
+	background: url(../images/red-logo.png) no-repeat 0 0;
+	background-size: 69px 25px;
+	display: block;
+	height: 25px;
+	margin: 15px;
+	text-indent: -9999px;
+	width: 69px;
+}
+.nav a {
+	color: $color-blue;
+	font-family: $font-family-sans-serif;
+	font-weight: 600;
+}
+.white-logo {
+	display: none;
+}
+.navbar-toggle {
+	border: 1px solid $color-white;
+
+	.icon-bar {
+		background-color: $color-white;
+	}
+}
+.has-background {
+	background-color: $color-white;
+	box-shadow: 0 2px 7px -2px #9baac2;
+
+	.icon-bar {
+		background-color: $color-blue;
+	}
+	.navbar-toggle {
+		border: 1px solid $color-blue;
+	}
+	a.cta {
+		border-color: $color-blue;
+		color: $color-blue;
+		margin: 15px;
+		text-align: center;
+		width: auto;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $color-blue;
+			color: $color-white;
+		}
+	}
+}
+
+/********************
+ * Hero
+ ********************/
+.hero {
+	background: url(../images/hero.jpg) no-repeat center center;
+	background-size: cover;
+	display: table;
+	padding: 50px 15px;
+	width: 100%;
+}
+.jumbo {
+	display: table-row;
+	vertical-align: middle;
+
+	a.logo {
+		background: url(../images/transparent-logo.png) no-repeat 0 0;
+		background-size: cover;
+		display: block;
+		width: 134px;
+		height: 48px;
+		margin-bottom: 10px;
+		text-indent: -9999px;
+	}
+	h2 {
+		color: $color-white;
+		font-size: 0.9em;
+		font-weight: 900;
+		line-height: 1.1em;
+		text-shadow: 2px 0 0 rgba(1, 1, 1, .23);
+	}
+}
+.job-search {
+	display: table-row;
+	text-align: center;
+	vertical-align: bottom;
+	height: 150px;
+
+	p {
+		color: $color-white;
+		font-size: 0.8em;
+		line-height: 1.1em;
+		margin-top: 35px;
+	}
+}
+.form-inline {
+	input,
+	select {
+		border: 3px solid #cdbcbc;
+		color: #766868;
+		font-family: $font-family-serif;
+		font-size: 0.8em;
+		font-style: italic;
+		padding: 0 25px;
+		width: 100%;
+		@include border-radius( 27px );
+	}
+	input[type='submit'] {
+		border-color: $color-red;
+		color: $color-white;
+		padding: 10px 0;
+		@include transition( all 0.2s ease-in );
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: darken( $color-red, 10% );
+			border-color: darken( $color-red, 10% );
+		}
+	}
+}
+
+/********************
+ * Content
+ ********************/
+.container-fluid.blue-bg {
+	color: $color-white;
+	padding: 50px 15px 36px 15px;
+	margin-top: 15px;
+
+	.col-md-4 {
+		margin-bottom: 30px;
+		text-align: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		h3 {
+			padding: 20px 0 10px 0;
+			font-size: 1.2em;
+			font-weight: 900;
+		}
+	}
+}
+.grid {
+	margin: 15px 15px 0 15px;
+	overflow: hidden;
+	padding: 0;
+
+	img {
+		display: inline-block;
+		height: auto;
+		margin: 0;
+		//@include transform( scale( 1.2 ) );
+		//@include transition( transform 0.2s ease-in );
+	}
+	&:hover img {
+		// @include transform( scale( 1 ) );
+	}
+}
+.grid-content {
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+
+	h2 {
+		color: $color-white;
+		font-size: 1.5em;
+		font-weight: 900;
+		padding-bottom: 10px;
+	}
+	p {
+		color: $color-white;
+		font-style: italic;
+	}
+	ol {
+		color: $color-white;
+	}
+}
+
+.whyScoot {
+		a {
+			color: #FFF;
+			text-decoration: underline;
+		}
+		a:hover {
+			color: #C2C2C2;
+		}
+}
+
+.mill {
+	color: #fff;
+	float: left;
+	margin: 25px 0;
+	width: 45%;
+
+	h4 {
+		font-size: 1em;
+	}
+}
+
+.videocv {
+	color: #fff;
+	float: right;
+	margin: 25px 0;
+	width: 45%;
+
+	h4 {
+		font-size: 1em;
+	}
+}
+
+.featured-job {
+	.job-header {
+		position: relative;
+
+		span.featured {
+			color: $color-white;
+			display: inline-block;
+			font-size: .7em;
+			font-style: italic;
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+		p {
+			background: rgba( 49, 49, 49, .6);
+			color: $color-white;
+			display: inline-block;
+			font-style: italic;
+			padding: 9px;
+			position: absolute;
+			right: -15px;
+			top: -15px;
+
+			span {
+				display: block;
+				font-size: 1.3em;
+				font-weight: 500;
+			}
+		}
+	}
+	.job-content {
+		position: absolute;
+		left: 50%;
+		margin-left: -50%;
+		right: 50%;
+		text-align: center;
+		top: 50%;
+		width: 100%;
+		@include transform( translateY( -50% ) );
+
+		h3 {
+			color: $color-white;
+			font-size: 1.2em;
+			font-weight: 900;
+			padding-bottom: 8px;
+		}
+		a.cta {
+			margin-top: 10px;
+		}
+	}
+	.job-footer {
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+
+		ul {
+			font-size: .7em;
+			font-style: italic;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+			}
+		}
+		li a {
+			color: $color-white;
+			font-weight: 400;
+			padding: 5px 20px;
+
+			&:hover {
+				background-color: $color-green;
+				@include border-radius( 20px );
+			}
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+		li.active a {
+			background-color: $color-green;
+			@include border-radius( 20px );
+		}
+	}
+}
+
+/******************
+ * Our Clients
+ *****************/
+.our-clients {
+	padding: 50px 15px 36px 15px;
+
+	h2 {
+		color: #727272;
+		font-size: 1.7em;
+		font-weight: 900;
+		line-height: 1;
+	}
+	p {
+		font-style: italic;
+	}
+	ul {
+		list-style: none;
+		padding: 20px 0 0 0;
+
+		li {
+			padding-bottom: 25px;
+			text-align: center;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+/**************************
+ * Post a job & Find a job
+ **************************/
+.job-seeking {
+	padding-bottom: 50px;
+}
+.job-seeking-content {
+	padding-top: 15%;
+}
+
+/******************
+ * Footer
+ *****************/
+footer {
+	background-color: #333;
+	padding: 50px 0;
+}
+footer hr {
+	border-top: 1px solid #494949;
+}
+.footer-nav {
+	padding-bottom: 20px;
+	text-align: center;
+	width: 100%;
+
+	h4 {
+		color: $color-white;
+		font-size: 1em;
+		font-weight: 900;
+		padding-bottom: 5px;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul a {
+		color: $color-white;
+		font-style: italic;
+	}
+}
+.footer-logo {
+	width: 100%;
+	text-align: center;
+
+	a {
+		background: url(../images/transparent-logo.png) no-repeat 0 0;
+		background-size: 87px 32px;
+		width: 87px;
+		height: 32px;
+		display: inline-block;
+		text-indent: -9999px;
+	}
+}
+
+/******************
+ * Small devices
+ *****************/
+@media ( min-width: 480px ) {
+	.has-background a.cta {
+		margin: 15px auto;
+		width: 200px;
+	}
+	.grid img {
+		width: 100%;
+		height: 100%;
+	}
+	.job-seeking .grid img {
+		height: auto;
+	}
+}
+
+/******************
+ * iPad & Tablet
+ *****************/
+@media ( min-width: 768px ) {
+	.hero {
+		height: 50vh;
+		padding: 0;
+	}
+	.navbar>.container-fluid .navbar-brand {
+		background-size: 138px 49px;
+		margin-left: 0;
+		width: 138px;
+		height: 49px;
+	}
+	.nav {
+		float: right;
+
+		li {
+			padding: 11px 15px;
+		}
+		a.cta {
+		//	border-bottom: 2px solid $color-white;
+			color: $color-white;
+			line-height: 1;
+			margin-top: 10px;
+			margin-bottom: 0;
+			padding: 10px 25px;
+
+			&:hover,
+			&:focus,
+			&:active {
+				border-color: $color-white;
+				background-color: $color-blue;
+				color: $color-white;
+				text-shadow: none;
+			}
+		}
+	}
+	.navbar-nav>li>a {
+	//	border-bottom: 3px solid transparent;
+		color: $color-white;
+		font-size: 1em;
+		padding: 20px 0 5px;
+		text-shadow: 1px 2px 3px #727272;
+	}
+	.nav>li>a:hover,
+	.nav>li>a:focus {
+		background-color: transparent;
+		border-bottom-color: $color-white;
+	}
+	.has-background {
+		a.cta {
+		//	border-bottom-color: $color-blue;
+
+			&:hover,
+			&:focus,
+			&:active {
+		//		border-bottom-color: $color-blue;
+			}
+		}
+		.navbar-nav>li>a {
+			color: $color-blue;
+			text-shadow: none;
+
+			&:hover,
+			&:focus,
+			&:active {
+		//		border-bottom-color: $color-blue;
+			}
+		}
+	}
+
+	.mill {
+		color: #fff;
+		float: left;
+		margin: 100px 0;
+		width: 45%;
+	}
+
+	.videocv {
+		color: #fff;
+		float: right;
+		margin: 100px 0;
+		width: 45%;
+	}
+
+	/**********************
+	 *	Jumbo
+	 **********************/
+	.jumbo {
+		display: block;
+		padding: 150px 15px 100px 15px;
+
+		a.logo {
+			background-size: 268px 97px;
+			height: 97px;
+			margin-bottom: 15px;
+			width: 268px;
+		}
+		h2 {
+			font-size: 1.5em;
+		}
+	}
+	.job-search {
+		background-color: rgba(0, 0, 0, .35);
+		padding: 0;
+
+		.form-inline input[type='submit'] {
+			padding: 10px 25px;
+		}
+	}
+}
+
+/******************
+ * Desktop
+ *****************/
+@media ( min-width: 1024px ) {
+	.hero {
+		height: 75vh;
+	}
+	.jumbo {
+		padding: 210px 0;
+	}
+	.form-inline input[type='text'],
+	.form-inline select {
+		width: 100% !important;
+	}
+	.grid {
+		margin: 15px 0 0;
+		height: 400px;
+
+		&.neg-margin-left {
+			margin-left: -15px;
+			margin-right: 15px;
+
+			.grid-content {
+				padding-left: 30px;
+			}
+		}
+		&.pos-margin-right {
+			margin-right: 15px;
+		}
+		&.double-neg-margin-left {
+			margin-left: -30px;
+			margin-right: 15px;
+
+			.job-header {
+				.featured {
+					font-size: .7em;
+					margin-left: 30px;
+				}
+			}
+
+			.job-footer {
+				left: 45px;
+			}
+		}
+	}
+	footer {
+		padding: 50px 15px;
+	}
+	.footer-navs {
+		float: left;
+		padding-left: 100px;
+		width: 75%;
+	}
+	.footer-nav {
+		float: left;
+		text-align: left;
+		width: 150px;
+	}
+	.footer-logo {
+		float: right;
+		width: 25%;
+		padding-top: 50px;
+	}
+}
+
+/******************
+ * Large Devices
+ *****************/
+@media ( min-width: 1200px ) {
+
+}

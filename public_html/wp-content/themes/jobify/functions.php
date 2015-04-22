@@ -1340,3 +1340,8 @@ if( !empty( $referrer ) && !strstr( $referrer,'wp-login' ) && !strstr( $referrer
 }
 
 }
+
+/** 
+	Include wp_bootstrap_navwalker
+*/
+require_once('inc/wp_bootstrap_navwalker.php');
