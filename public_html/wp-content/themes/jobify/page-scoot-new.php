@@ -15,7 +15,7 @@ Template Name: New Scoot Template
 	<script src="//use.typekit.net/plh5zpf.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 	<link href='http://fonts.googleapis.com/css?family=Dangrek|Siemreap' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/new-style.css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
